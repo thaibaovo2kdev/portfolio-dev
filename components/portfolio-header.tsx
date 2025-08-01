@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Download } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { getNavItems, getPersonalInfo } from "@/lib/data"
 
@@ -19,21 +20,28 @@ export function PortfolioHeader() {
       setScrolled(window.scrollY > 20)
 
       // Determine active section based on scroll position
-      const sections = navItems.filter((item) => item.href.startsWith("#")).map((item) => item.href.substring(1))
+      const sections = navItems.filter((item: any) => item.href.startsWith("#")).map((item: any) => item.href.substring(1))
 
       // Find the current section in view
-      for (const section of sections.reverse()) {
-        // Check from bottom to top
+      let foundActiveSection = ""
+
+      for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const rect = element.getBoundingClientRect()
-          if (rect.top <= 150) {
-            // If section is at or above 150px from viewport top
-            setActiveSection(section)
+          // Check if section is in viewport (top is above middle of screen)
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            foundActiveSection = section
             break
+          }
+          // If section top is close to top of viewport
+          if (rect.top <= 200 && rect.bottom > 200) {
+            foundActiveSection = section
           }
         }
       }
+
+      setActiveSection(foundActiveSection)
 
       // If scrolled to top, set Home as active
       if (window.scrollY < 100) {
@@ -47,6 +55,15 @@ export function PortfolioHeader() {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
+  }
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a")
+    link.href = "/cv/Vo-Thai-Bao-CV_.pdf"
+    link.download = "Vo-Thai-Bao-CV_.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -69,35 +86,48 @@ export function PortfolioHeader() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
-          {navItems.map((item) => {
-            const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
+        <div className="hidden md:flex items-center space-x-4">
+          <nav className="flex items-center space-x-1">
+            {navItems.map((item) => {
+              const isActive = item.href === "/" ? activeSection === "" : activeSection === item.href.substring(1)
 
-            return (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={cn(
-                  "px-3 py-2 text-sm relative group transition-all duration-300",
-                  isActive ? "text-cyan-400" : "text-zinc-400 hover:text-white",
-                )}
-              >
-                <span className="relative z-10">{item.label}</span>
-
-                {/* Hover effect - subtle background glow */}
-                <span className="absolute inset-0 bg-cyan-500/0 rounded-md group-hover:bg-cyan-500/10 transition-all duration-300"></span>
-
-                {/* Hover effect - bottom border */}
-                <span
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
                   className={cn(
-                    "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-4/5",
-                    isActive && "w-4/5",
+                    "px-3 py-2 text-sm relative group transition-all duration-300",
+                    isActive ? "text-cyan-400" : "text-zinc-400 hover:text-white",
                   )}
-                ></span>
-              </Link>
-            )
-          })}
-        </nav>
+                >
+                  <span className="relative z-10">{item.label}</span>
+
+                  {/* Hover effect - subtle background glow */}
+                  <span className="absolute inset-0 bg-cyan-500/0 rounded-md group-hover:bg-cyan-500/10 transition-all duration-300"></span>
+
+                  {/* Hover effect - bottom border */}
+                  <span
+                    className={cn(
+                      "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-4/5",
+                      isActive && "w-4/5",
+                    )}
+                  ></span>
+                </Link>
+              )
+            })}
+          </nav>
+
+          {/* Desktop Download CV Button */}
+          <Button
+            onClick={handleDownloadCV}
+            size="sm"
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium transition-all duration-300 hover:scale-105"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            <span className="hidden lg:inline">Download CV</span>
+            <span className="lg:hidden">CV</span>
+          </Button>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -148,6 +178,25 @@ export function PortfolioHeader() {
               </Link>
             )
           })}
+
+          {/* Mobile Download CV Button */}
+          <div className="pt-4 border-t border-zinc-800">
+            <Button
+              onClick={() => {
+                handleDownloadCV()
+                setMobileMenuOpen(false)
+              }}
+              className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium transition-all duration-300"
+              style={{
+                transitionDelay: `${navItems.length * 50}ms`,
+                transform: mobileMenuOpen ? "translateX(0)" : "translateX(20px)",
+                opacity: mobileMenuOpen ? 1 : 0,
+              }}
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Download CV
+            </Button>
+          </div>
         </nav>
       </div>
     </header>

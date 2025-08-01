@@ -4,9 +4,10 @@ import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { SocialLinks } from "@/components/social-links"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { User, MapPin, Mail, Phone, Languages, Clock, Briefcase } from "lucide-react"
+import { User, MapPin, Mail, Phone, Languages, Clock, Briefcase, Download } from "lucide-react"
 import { getPersonalInfo, getAboutInfo } from "@/lib/data"
 
 export function EnhancedProfile() {
@@ -14,6 +15,16 @@ export function EnhancedProfile() {
 
   const personalInfo = getPersonalInfo()
   const aboutInfo = getAboutInfo()
+
+  const handleDownloadCV = () => {
+    // Create a link element and trigger download
+    const link = document.createElement("a")
+    link.href = "/cv/Vo-Thai-Bao-CV_.pdf" // Path to your CV file in public folder
+    link.download = "Vo-Thai-Bao-CV_.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm col-span-1 flex flex-col">
@@ -46,6 +57,16 @@ export function EnhancedProfile() {
               </Badge>
             ))}
           </div>
+
+          {/* Download CV Button */}
+          <Button
+            onClick={handleDownloadCV}
+            className="w-full mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium transition-all duration-300 hover:scale-105"
+            size="sm"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download CV
+          </Button>
 
           <SocialLinks socialLinks={personalInfo.social} />
         </div>
