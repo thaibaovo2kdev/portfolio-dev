@@ -13,8 +13,8 @@ interface SocialLinksProps {
 export function SocialLinks({ socialLinks }: SocialLinksProps) {
   return (
     <div className="flex justify-center gap-2 sm:gap-3 my-2 sm:my-3">
-      {socialLinks.map((link, index) => {
-        const IconComponent = LucideIcons[link.icon as keyof typeof LucideIcons]
+      {socialLinks.map((link: any, index) => {
+        const IconComponent: any = LucideIcons[link.icon as keyof typeof LucideIcons]
 
         return (
           <a

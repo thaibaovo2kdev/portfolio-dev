@@ -25,7 +25,7 @@ export function CredentialsSection() {
                 Professional Certifications
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                {credentialsInfo.certifications.map((cert, index) => (
+                {credentialsInfo.certifications.map((cert: any, index) => (
                   <div key={index} className="flex items-start bg-zinc-800/30 p-2 sm:p-3 rounded-lg">
                     {cert.logo && (
                       <div className="relative w-10 h-10 rounded overflow-hidden mr-3 flex-shrink-0 bg-zinc-800">

@@ -1,7 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card"
 import { ContactForm } from "@/components/contact-form"
-import { UserIcon, Mail, Phone, MapPin, Clock } from "lucide-react"
-import { SocialLinks } from "@/components/social-links"
+import { Card, CardContent } from "@/components/ui/card"
+import { Clock, Mail, MapPin, Phone, UserIcon } from "lucide-react"
 
 export function ContactSection() {
   return (
@@ -64,7 +63,7 @@ export function ContactSection() {
 
               <div className="pt-4">
                 <h4 className="font-medium mb-3">Connect with me</h4>
-                <SocialLinks />
+                {/* <SocialLinks /> */}
               </div>
             </div>
           </div>
