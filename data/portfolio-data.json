@@ -91,7 +91,7 @@
         "Developed and optimized Hyper Game Server backend supporting 15M+ users",
         "Engineered scalable slot game logic with reward calculation and RNG systems",
         "Designed multiple CMS platforms for game data management and analytics",
-        "Integrated Google & Apple IAP systems with Google Ads SDK for monetization",
+        "Integrated Google & Apple IAP systems, along with Google Ads SDK for monetization",
         "Led backend team coordination, code reviews, and deployment planning"
       ],
       "technologies": ["Node.js", "Express.js", "MongoDB", "Google IAP", "Apple IAP", "Google Ads SDK"]
