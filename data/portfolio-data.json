@@ -12,7 +12,11 @@
     "phone": "+84 877 602 061",
     "workingHours": "Monday - Friday, 9am - 6pm ICT",
     "availableForWork": true,
-    "badges": ["Full-stack", "React.js", "Node.js"],
+    "badges": [
+      "Full-stack",
+      "React.js",
+      "Node.js"
+    ],
     "social": [
       {
         "platform": "GitHub",
@@ -37,11 +41,11 @@
     ]
   },
   "about": {
-    "bio": "Dynamic and resourceful Full-stack Developer with over 4 years of experience in developing cutting-edge web applications. Proficient in ensuring that user experience remains at the forefront of design choices while balancing functional and aesthetic aspects. Skilled in both front-end and back-end development, dedicated to maintaining brand consistency throughout the development process.",
+    "bio": "Full-stack Engineer with 4+ years of experience designing, building, and operating scalable web applications and backend systems. Strong in system architecture, API design, and data-intensive workflows, with hands-on expertise across both front-end and back-end stacks. Experienced in translating complex business requirements into robust technical solutions, optimizing performance, reliability, and maintainability using modern engineering practices and industry-standard methodologies.",
     "focus": [
-      "Developing scalable web applications with modern technologies",
-      "Leading development teams and mentoring junior developers",
-      "Optimizing application performance and user experience"
+      "Designing scalable system architecture and API solutions",
+      "Building data-intensive workflows and backend systems",
+      "Optimizing performance, reliability and maintainability"
     ],
     "languages": [
       {
@@ -57,7 +61,13 @@
         "flag": "🇺🇸"
       }
     ],
-    "interests": ["Web Development", "Mobile Development", "Game Development", "Cloud Computing", "Team Leadership"]
+    "interests": [
+      "Web Development",
+      "Mobile Development",
+      "Game Development",
+      "Cloud Computing",
+      "Team Leadership"
+    ]
   },
   "navigation": [
     {
@@ -86,57 +96,107 @@
       "title": "Full-stack Developer",
       "company": "Playad Company",
       "period": "Oct 2024 - Present",
-      "description": "Currently developing and optimizing Hyper Game Server backend supporting 15M+ Android & iOS users, ensuring high availability and performance. Leading backend development initiatives and coordinating with cross-functional teams.",
+      "description": "Developing and optimizing Hyper Game Server backend supporting 20M+ Android & iOS users, ensuring high availability and performance. Leading a small backend/server team with task coordination, code reviews, and deployment planning.",
       "achievements": [
-        "Developed and optimized Hyper Game Server backend supporting 15M+ users",
-        "Engineered scalable slot game logic with reward calculation and RNG systems",
-        "Designed multiple CMS platforms for game data management and analytics",
-        "Integrated Google & Apple IAP systems, along with Google Ads SDK for monetization",
-        "Led backend team coordination, code reviews, and deployment planning"
+        "Developed and optimized Hyper Game Server backend supporting 20M+ Android & iOS users",
+        "Engineered scalable slot game logic including reward calculation, RNG, error handling, and analytics hooks",
+        "Designed and implemented multiple CMS platforms for game data, ad tracking, user access control, and reporting dashboards",
+        "Integrated Google & Apple IAP systems, Google Ads SDK for smooth and secure monetization pipeline",
+        "Led a small backend/server team, coordinated task assignments, code reviews, and deployment planning"
       ],
-      "technologies": ["Node.js", "Express.js", "MongoDB", "Google IAP", "Apple IAP", "Google Ads SDK"]
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Google IAP",
+        "Apple IAP",
+        "Google Ads SDK"
+      ]
+    },
+    {
+      "title": "Full-stack Developer (Remote)",
+      "company": "Penguin Secret Agency",
+      "period": "Dec 2024 - Dec 2025",
+      "description": "Owned and developed an end-to-end ecommerce chargeback system (Chargeflow.io), crawling and processing large-scale data from Shopify, Stripe, and PayPal. Built automated evidence generation and submission pipelines to handle payment disputes efficiently at scale.",
+      "achievements": [
+        "Owned and developed end-to-end ecommerce chargeback system (Chargeflow.io)",
+        "Crawled and processed large-scale data from Shopify, Stripe, and PayPal",
+        "Built automated evidence generation & submission pipelines for payment disputes at scale",
+        "Contributed to an LLM/ML-powered website generation platform similar to v0 (shopquantum.ai)"
+      ],
+      "technologies": [
+        "Node.js",
+        "TypeScript",
+        "Python",
+        "Shopify API",
+        "Stripe API",
+        "PayPal API",
+        "LLM/ML",
+        "PostgreSQL"
+      ]
     },
     {
       "title": "Full-stack Developer",
       "company": "eDigitek Company",
       "period": "Mar 2024 - Oct 2024",
-      "description": "Led architecture and development of key projects, ensuring alignment with business objectives and user needs. Collaborated with cross-functional teams and implemented best practices for testing and deployment.",
+      "description": "Led the architecture and development of key projects, ensuring alignment with business objectives and user needs. Collaborated closely with cross-functional teams to translate requirements into effective solutions.",
       "achievements": [
-        "Led architecture and development of key business-critical projects",
-        "Implemented comprehensive testing and deployment best practices",
-        "Drove development of user-centric applications based on feedback and usability studies",
-        "Mentored junior developers and fostered skill development within the team",
-        "Championed quality assurance culture and proactive bug identification"
+        "Led architecture and development of key projects ensuring business alignment",
+        "Collaborated closely with cross-functional teams to translate requirements into solutions",
+        "Implemented best practices for testing and deployment, ensuring high-quality releases",
+        "Drove development of user-centric applications informed by feedback and usability studies",
+        "Championed testing and quality assurance culture, leading initiatives to identify and fix bugs proactively",
+        "Mentored junior developers, providing guidance on best practices and fostering skill development"
       ],
-      "technologies": ["React.js", "Next.js", "Node.js", "TypeScript", "AWS", "Git"]
+      "technologies": [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "TypeScript",
+        "AWS",
+        "Git"
+      ]
     },
     {
       "title": "Full-stack Developer",
       "company": "EnglishWing Vietnam",
       "period": "Jun 2023 - Feb 2024",
-      "description": "Designed, developed, tested and deployed features for educational platform. Focused on user experience optimization and maintaining brand consistency throughout the development process.",
+      "description": "Designed, developed, tested and deployed design features promptly. Continually worked to ensure user experience determines design choices while achieving a balance between functional and aesthetic designs.",
       "achievements": [
-        "Designed and deployed educational platform features promptly",
-        "Ensured user experience determined all design choices",
-        "Achieved optimal balance between functional and aesthetic designs",
-        "Maintained brand consistency throughout the development process",
-        "Solved complex challenges using modern web development methodologies"
+        "Designed, developed, tested and deployed design features promptly",
+        "Ensured user experience determines design choices continually",
+        "Achieved balance between functional and aesthetic designs",
+        "Maintained brand consistency throughout the design process",
+        "Solved complex challenges using modern web application development processes and standard methodologies"
       ],
-      "technologies": ["React.js", "Node.js", "Express.js", "WordPress", "PHP", "MySQL"]
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "WordPress",
+        "PHP",
+        "MySQL"
+      ]
     },
     {
       "title": "Full-stack Developer",
       "company": "IOTLINK Company",
       "period": "Apr 2021 - Jun 2023",
-      "description": "Designed and developed scalable features with focus on optimizing user experience and performance. Worked in agile environment contributing to sprint planning and fostering collaboration with stakeholders.",
+      "description": "Designed and developed scalable features, focusing on optimizing the user experience and performance. Worked in an agile environment, contributing to sprint planning and retrospectives to continuously improve team efficiency.",
       "achievements": [
-        "Designed and developed scalable features focusing on UX optimization",
-        "Worked effectively in agile environment with sprint planning and retrospectives",
-        "Fostered collaboration with product managers and stakeholders",
-        "Prioritized features and resolved issues effectively",
-        "Contributed to continuous improvement of team efficiency"
+        "Designed and developed scalable features focusing on UX and performance optimization",
+        "Worked in agile environment, contributing to sprint planning and retrospectives",
+        "Fostered collaboration with product managers and stakeholders to prioritize features",
+        "Resolved issues effectively and contributed to continuous team efficiency improvement"
       ],
-      "technologies": ["JavaScript", "React.js", "Node.js", "Java", "Digital Ocean", "Nginx"]
+      "technologies": [
+        "JavaScript",
+        "React.js",
+        "Node.js",
+        "Java",
+        "Digital Ocean",
+        "Nginx"
+      ]
     }
   ],
   "credentials": {
@@ -172,8 +232,35 @@
       "Antd",
       "Shadcn UI"
     ],
-    "backend": ["Node.js", "Express.js", "Nest.js", "PHP", "Java"],
-    "languages": ["JavaScript", "TypeScript", "Java", "PHP"],
-    "tools": ["Git", "GitLab", "SourceTree", "Vite", "Webpack", "Postman", "Nginx", "Bun", "Digital Ocean", "AWS"]
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "Nest.js",
+      "PHP",
+      "Java"
+    ],
+    "database": [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "languages": [
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "PHP"
+    ],
+    "tools": [
+      "Git",
+      "GitLab",
+      "SourceTree",
+      "Vite",
+      "Webpack",
+      "Postman",
+      "Nginx",
+      "Bun",
+      "Digital Ocean",
+      "AWS"
+    ]
   }
 }
